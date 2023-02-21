@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe5b87a0e45456997b9e83b95c87b93, type: 3}
+  m_Name: Thirteenth Question Data
+  m_EditorClassIdentifier: 
+  difficulty: 12
+  questions:
+  - question: "Kimlere \"kar\u0131ncaezmez\" denir?"
+    answers:
+    - answer: "\xC7ok esprili ki\u015Filere"
+      isCorrect: 0
+    - answer: "\xC7ok merhametli ki\u015Filere"
+      isCorrect: 1
+    - answer: "\xC7ok g\xF6steri\u015Fli ki\u015Filere"
+      isCorrect: 0
+    - answer: "\xC7ok \xE7al\u0131\u015Fkan ki\u015Filere"
+      isCorrect: 0

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe5b87a0e45456997b9e83b95c87b93, type: 3}
+  m_Name: Second Question Data
+  m_EditorClassIdentifier: 
+  difficulty: 1
+  questions:
+  - question: "Sevr Antla\u015Fmas\u0131n\u0131 g\xF6steren \xFCnl\xFC haritada ba\u015Fka
+      devletlerin kontrol\xFCne b\u0131rak\u0131lan topraklar bug\xFCn e\u011Fer
+      o devletlerin topraklar\u0131 olarak kalm\u0131\u015F olsayd\u0131, T\xFCrkiye
+      vatanda\u015Flar\u0131n\u0131n hangisini ziyaret etmesi i\xE7in vize almas\u0131
+      gerekmeyecekti?"
+    answers:
+    - answer: Safranbolu Evleri
+      isCorrect: 1
+    - answer: Selimiye Camii
+      isCorrect: 0
+    - answer: "S\xFCmela Manast\u0131r\u0131"
+      isCorrect: 0
+    - answer: Halikarnas Mozelesi
+      isCorrect: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe5b87a0e45456997b9e83b95c87b93, type: 3}
+  m_Name: Eighth Question Data
+  m_EditorClassIdentifier: 
+  difficulty: 7
+  questions:
+  - question: "Tar\u0131k Akan hangisinde rol almam\u0131\u015Ft\u0131r?"
+    answers:
+    - answer: "Can\u0131m Karde\u015Fim"
+      isCorrect: 0
+    - answer: Mavi Boncuk
+      isCorrect: 0
+    - answer: "K\xF6yden \u0130ndim \u015Eehire"
+      isCorrect: 1
+    - answer: Ah Nerede
+      isCorrect: 0

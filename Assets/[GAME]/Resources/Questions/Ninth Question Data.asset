@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe5b87a0e45456997b9e83b95c87b93, type: 3}
+  m_Name: Ninth Question Data
+  m_EditorClassIdentifier: 
+  difficulty: 8
+  questions:
+  - question: "T\xFCrkiye'de ad\u0131nda yan yana iki sesli harf olan d\xF6rt il
+      var, bunlardan biri Gaziantep, biri \u015Eanl\u0131urfa, biri Siirt, di\u011Feri
+      akl\u0131ma gelmedi! diyen birinin unuttu\u011Fu il nerededir?"
+    answers:
+    - answer: "Marmara B\xF6lgesi"
+      isCorrect: 1
+    - answer: "Ege B\xF6lgesi"
+      isCorrect: 0
+    - answer: "Karadeniz B\xF6lgesi"
+      isCorrect: 0
+    - answer: "Akdeniz B\xF6lgesi"
+      isCorrect: 0
