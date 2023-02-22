@@ -37,6 +37,35 @@ namespace OrangeBear.Bears
 
         #endregion
 
+        #region Event Methods
+
+        protected override void CheckRoarings(bool status)
+        {
+            if (status)
+            {
+                Register(CustomEvents.NextQuestion, NextQuestion);
+            }
+
+            else
+            {
+                Unregister(CustomEvents.NextQuestion, NextQuestion);
+            }
+        }
+
+        private void NextQuestion(object[] arguments)
+        {
+            _questionIndex++;
+            if (_questionIndex >= questions.Count)
+            {
+                return;
+            }
+
+            _currentQuestion = GetQuestion();
+            Roar(CustomEvents.InitQuestion, _currentQuestion);
+        }
+
+        #endregion
+
         #region Private Methods
 
         private QuestionData GetQuestion()

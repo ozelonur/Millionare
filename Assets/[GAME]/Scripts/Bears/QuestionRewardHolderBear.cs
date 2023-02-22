@@ -1,4 +1,6 @@
+using System;
 using _GAME_.Scripts.Models;
+using DG.Tweening;
 using OrangeBear.EventSystem;
 using TMPro;
 using UnityEngine;
@@ -17,6 +19,7 @@ namespace OrangeBear.Bears
         [SerializeField] private Image holderImage;
 
         #endregion
+
         #region Public Methods
 
         public void InitQuestionReward(QuestionRewardData questionRewardData, int indexValue)
@@ -28,6 +31,16 @@ namespace OrangeBear.Bears
             {
                 holderImage.color = Color.yellow;
             }
+        }
+
+        public void AnimateEarning(Action callback = null)
+        {
+            holderImage.DOColor(Color.green, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
+        }
+
+        public void AnimateNext(Action callback = null)
+        {
+            holderImage.DOColor(Color.blue, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
         }
 
         #endregion
