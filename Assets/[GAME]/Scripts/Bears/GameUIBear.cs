@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using _GAME_.Scripts.CustomInputs;
 using _GAME_.Scripts.Enums;
@@ -49,6 +50,7 @@ namespace OrangeBear.Bears
                 Register(CustomEvents.InitQuestion, InitQuestion);
                 Register(GameEvents.OnGameStart, OnGameStart);
                 Register(CustomEvents.CorrectAnswer, CorrectAnswer);
+                Register(CustomEvents.HalfJokerUsed, HalfJokerUsed);
             }
 
             else
@@ -56,6 +58,19 @@ namespace OrangeBear.Bears
                 Unregister(CustomEvents.InitQuestion, InitQuestion);
                 Unregister(GameEvents.OnGameStart, OnGameStart);
                 Unregister(CustomEvents.CorrectAnswer, CorrectAnswer);
+                Unregister(CustomEvents.HalfJokerUsed, HalfJokerUsed);
+            }
+        }
+
+        private void HalfJokerUsed(object[] arguments)
+        {
+            List<AnswerButton> wrongAnswers = answerButtons.Where(x => !x.IsCorrect()).ToList();
+
+            for (int i = 0; i < 2; i++)
+            {
+                int index = Random.Range(0, wrongAnswers.Count - 1);
+                wrongAnswers[index].gameObject.SetActive(false);
+                wrongAnswers.RemoveAt(index);
             }
         }
 
@@ -99,9 +114,9 @@ namespace OrangeBear.Bears
             {
                 StopCoroutine(_rewardPanelTimer);
             }
-            
+
             tapForNextButton.transform.localScale = Vector3.one;
-            
+
             QuestionData questionData = (QuestionData)arguments[0];
 
             questionText.text = questionData.question;
@@ -114,6 +129,7 @@ namespace OrangeBear.Bears
             int questionNumber = (int)arguments[1];
             questionNumber += 1;
             questionNumberText.text = questionNumber + "/12";
+            ActivateAllButtons();
             ActivatePanel(InGamePanels.Question);
         }
 
@@ -139,6 +155,14 @@ namespace OrangeBear.Bears
 
             tapForNextButton.transform.DOKill(true);
             Roar(CustomEvents.NextQuestion);
+        }
+
+        private void ActivateAllButtons()
+        {
+            foreach (AnswerButton answerButton in answerButtons)
+            {
+                answerButton.gameObject.SetActive(true);
+            }
         }
 
         #endregion
