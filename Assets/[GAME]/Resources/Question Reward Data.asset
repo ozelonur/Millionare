@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edcb7679b354b3ba1c81f9cc98b0892, type: 3}
+  m_Name: Question Reward Data
+  m_EditorClassIdentifier: 
+  questionRewardDataList:
+  - amount: 500
+    isCheckPoint: 0
+  - amount: 1000
+    isCheckPoint: 0
+  - amount: 2000
+    isCheckPoint: 0
+  - amount: 3000
+    isCheckPoint: 1
+  - amount: 5000
+    isCheckPoint: 0
+  - amount: 7500
+    isCheckPoint: 1
+  - amount: 15000
+    isCheckPoint: 0
+  - amount: 30000
+    isCheckPoint: 0
+  - amount: 60000
+    isCheckPoint: 0
+  - amount: 125000
+    isCheckPoint: 0
+  - amount: 250000
+    isCheckPoint: 0
+  - amount: 1000000
+    isCheckPoint: 1
