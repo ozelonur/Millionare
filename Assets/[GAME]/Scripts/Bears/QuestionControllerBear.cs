@@ -32,7 +32,7 @@ namespace OrangeBear.Bears
 
         private void Start()
         {
-            Roar(CustomEvents.InitQuestion, _currentQuestion);
+            Roar(CustomEvents.InitQuestion, _currentQuestion, _questionIndex);
         }
 
         #endregion
@@ -61,7 +61,7 @@ namespace OrangeBear.Bears
             }
 
             _currentQuestion = GetQuestion();
-            Roar(CustomEvents.InitQuestion, _currentQuestion);
+            Roar(CustomEvents.InitQuestion, _currentQuestion, _questionIndex);
         }
 
         #endregion

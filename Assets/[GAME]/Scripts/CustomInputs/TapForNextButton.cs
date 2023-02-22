@@ -10,7 +10,6 @@ namespace _GAME_.Scripts.CustomInputs
         {
             base.OnClick();
             transform.DOKill(true);
-            print("Next Question");
             Roar(CustomEvents.NextQuestion);
         }
     }
