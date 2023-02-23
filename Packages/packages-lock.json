@@ -7,12 +7,26 @@
       "dependencies": {},
       "hash": "f8f8dc7766254b3641a469035045ec34952c42e4"
     },
+    "com.orangebear.entitysystem": {
+      "version": "https://github.com/ozelonur/com.orangebear.entitysystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a115cca978c0ba5a7e6321ba1c31d493d2cafe27"
+    },
     "com.orangebear.ui": {
       "version": "https://github.com/ozelonur/com.orangebear.ui.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "2ba7561f53818b8e91591291734ed68cfc9d73c2"
+    },
+    "com.orangebear.utilities": {
+      "version": "https://github.com/ozelonur/com.orangebear.utilities.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "214ba9a256fa63e92eea0529730b188f535032c0"
     },
     "com.unity.burst": {
       "version": "1.8.2",
