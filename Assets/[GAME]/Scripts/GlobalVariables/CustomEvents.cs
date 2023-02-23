@@ -7,5 +7,6 @@
         public const string NextQuestion = nameof(NextQuestion);
         public const string HalfJokerUsed = nameof(HalfJokerUsed);
         public const string PhoneJokerUsed = nameof(PhoneJokerUsed);
+        public const string AudienceJokerUsed = nameof(AudienceJokerUsed);
     }
 }
