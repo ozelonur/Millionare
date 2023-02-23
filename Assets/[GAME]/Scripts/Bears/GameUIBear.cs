@@ -37,6 +37,7 @@ namespace OrangeBear.Bears
         #region Private Variables
 
         private Coroutine _rewardPanelTimer;
+        private bool _newGameButtonClicked;
 
         #endregion
 
@@ -51,6 +52,7 @@ namespace OrangeBear.Bears
                 Register(GameEvents.OnGameStart, OnGameStart);
                 Register(CustomEvents.CorrectAnswer, CorrectAnswer);
                 Register(CustomEvents.HalfJokerUsed, HalfJokerUsed);
+                Register(CustomEvents.NewGameButtonClicked, NewGameButtonClicked);
             }
 
             else
@@ -59,7 +61,22 @@ namespace OrangeBear.Bears
                 Unregister(GameEvents.OnGameStart, OnGameStart);
                 Unregister(CustomEvents.CorrectAnswer, CorrectAnswer);
                 Unregister(CustomEvents.HalfJokerUsed, HalfJokerUsed);
+                Unregister(CustomEvents.NewGameButtonClicked, NewGameButtonClicked);
             }
+        }
+
+        protected override void InitLevel(object[] arguments)
+        {
+            base.InitLevel(arguments);
+            if (!_newGameButtonClicked) return;
+
+            StartGame();
+            _newGameButtonClicked = false;
+        }
+
+        private void NewGameButtonClicked(object[] arguments)
+        {
+            _newGameButtonClicked = true;
         }
 
         private void HalfJokerUsed(object[] arguments)

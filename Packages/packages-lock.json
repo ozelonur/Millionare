@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f98fca2534bed4619bb94b7168c7bf1f1ab44ce8"
+      "hash": "f8f8dc7766254b3641a469035045ec34952c42e4"
     },
     "com.orangebear.ui": {
       "version": "https://github.com/ozelonur/com.orangebear.ui.git",

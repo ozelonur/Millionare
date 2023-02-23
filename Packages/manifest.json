@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.orangebear.core": "https://github.com/ozelonur/com.orangebear.core.git",
+    "com.orangebear.core" : "https://github.com/ozelonur/com.orangebear.core.git",
     "com.orangebear.ui": "https://github.com/ozelonur/com.orangebear.ui.git",
     "com.unity.collab-proxy": "2.0.0",
     "com.unity.ide.rider": "3.0.18",
