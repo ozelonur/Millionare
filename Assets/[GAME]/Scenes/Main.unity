@@ -4612,6 +4612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionHolder: {fileID: 1834084937}
   phoneJokerPanel: {fileID: 1794000883}
+  answerText: {fileID: 1773457873}
 --- !u!1001 &1483576542
 PrefabInstance:
   m_ObjectHideFlags: 0
