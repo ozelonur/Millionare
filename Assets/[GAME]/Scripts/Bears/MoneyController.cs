@@ -1,11 +1,12 @@
 using _GAME_.Scripts.GlobalVariables;
-using _GAME_.Scripts.Models;
 using _GAME_.Scripts.ScriptableObjects;
 using OrangeBear.EventSystem;
+using UnityEngine;
+#if UNITY_EDITOR
+using _GAME_.Scripts.Models;
 using Sirenix.OdinInspector;
 using UnityEditor;
-using UnityEngine;
-using UnityEngine.Serialization;
+#endif
 
 namespace OrangeBear.Bears
 {
@@ -34,6 +35,11 @@ namespace OrangeBear.Bears
         private void Awake()
         {
             _holders = parent.GetComponentsInChildren<QuestionRewardHolderBear>();
+        }
+
+        private void Start()
+        {
+            Roar(CustomEvents.GetQuestionRewardDatas, _questionRewardDataScriptableObject);
         }
 
         #endregion
@@ -85,6 +91,7 @@ namespace OrangeBear.Bears
 
         #region Private Methods
 
+#if UNITY_EDITOR
         [Button("Init Rewards")]
         private void InitRewards()
         {
@@ -106,6 +113,7 @@ namespace OrangeBear.Bears
                 questionRewardHolderBear.InitQuestionReward(questionRewardDataList[i], i);
             }
         }
+#endif
 
         #endregion
     }

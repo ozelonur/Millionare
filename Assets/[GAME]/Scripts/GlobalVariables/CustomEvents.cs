@@ -9,5 +9,8 @@
         public const string PhoneJokerUsed = nameof(PhoneJokerUsed);
         public const string AudienceJokerUsed = nameof(AudienceJokerUsed);
         public const string NewGameButtonClicked = nameof(NewGameButtonClicked);
+        public const string UpdateMoneyAmount = nameof(UpdateMoneyAmount);
+        public const string GetQuestionRewardDatas = nameof(GetQuestionRewardDatas);
+        public const string GetLevelBasedMoney = nameof(GetLevelBasedMoney);
     }
 }

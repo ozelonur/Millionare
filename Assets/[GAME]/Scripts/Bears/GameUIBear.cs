@@ -4,7 +4,9 @@ using System.Linq;
 using _GAME_.Scripts.CustomInputs;
 using _GAME_.Scripts.Enums;
 using _GAME_.Scripts.GlobalVariables;
+using _GAME_.Scripts.Managers;
 using _GAME_.Scripts.Models;
+using _GAME_.Scripts.ScriptableObjects;
 using DG.Tweening;
 using OrangeBear.Core;
 using OrangeBear.EventSystem;
@@ -32,12 +34,19 @@ namespace OrangeBear.Bears
         [Header("Question Number Text")] [SerializeField]
         private TMP_Text questionNumberText;
 
+        [Header("Question Money Text")] [SerializeField]
+        private TMP_Text questionMoneyText;
+        
+        [Header("Configuration Data")][SerializeField]
+        private QuestionRewardDataScriptableObject questionRewardDatas;
+
         #endregion
 
         #region Private Variables
 
         private Coroutine _rewardPanelTimer;
         private bool _newGameButtonClicked;
+
 
         #endregion
 
@@ -114,7 +123,11 @@ namespace OrangeBear.Bears
                 {
                     if (answer.IsCorrect())
                     {
-                        answer.AnimateCorrect(() => { Roar(GameEvents.OnGameComplete, false); });
+                        answer.AnimateCorrect(() =>
+                        {
+                            Roar(GameEvents.OnGameComplete, false);
+                            Roar(CustomEvents.UpdateMoneyAmount, MoneyManager.Instance.moneyData.Money);
+                        });
                     }
                 }
             }
@@ -143,7 +156,10 @@ namespace OrangeBear.Bears
                 answerButtons[i].InitButton(questionData.answers[i]);
             }
 
+
             int questionNumber = (int)arguments[1];
+
+            questionMoneyText.text = "₺" + questionRewardDatas.questionRewardDataList[questionNumber].amount;
             questionNumber += 1;
             questionNumberText.text = questionNumber + "/12";
             ActivateAllButtons();
