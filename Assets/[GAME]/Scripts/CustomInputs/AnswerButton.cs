@@ -16,11 +16,17 @@ namespace _GAME_.Scripts.CustomInputs
         [Header("Components")] [SerializeField]
         private TMP_Text answerText;
 
+        [SerializeField] private Image buttonInsideImage;
+
+        [SerializeField] private Color correctAnswerColor;
+        [SerializeField] private Color wrongAnswerColor;
+        [SerializeField] private Color neutralColor;
+
         #endregion
 
         #region Private Variables
 
-        private AnswerData answerData;
+        private AnswerData _answerData;
 
         #endregion
 
@@ -29,29 +35,31 @@ namespace _GAME_.Scripts.CustomInputs
         public void InitButton(AnswerData answerDataValue)
         {
             ResetButton();
-            answerData = answerDataValue;
-            answerText.text = answerData.answer;
+            _answerData = answerDataValue;
+            answerText.text = _answerData.answer;
+
+            buttonInsideImage.color = neutralColor;
         }
 
         public bool IsCorrect()
         {
-            return answerData.isCorrect;
+            return _answerData.isCorrect;
         }
 
         public void AnimateCorrect(Action callback = null)
         {
-            buttonImage.DOColor(Color.green, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
+            buttonInsideImage.DOColor(Color.green, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
         }
 
         public void AnimateWrong(Action callback = null)
         {
-            buttonImage.DOColor(Color.red, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
+            buttonInsideImage.DOColor(Color.red, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
         }
 
         protected override void OnClick()
         {
             base.OnClick();
-            if (answerData.isCorrect)
+            if (_answerData.isCorrect)
             {
                 AnimateCorrect(() => { Roar(CustomEvents.CorrectAnswer, true); });
             }
@@ -71,8 +79,8 @@ namespace _GAME_.Scripts.CustomInputs
             {
                 buttonImage = GetComponent<Image>();
             }
-            transform.DOKill();
-            buttonImage.color = Color.white;
+            buttonInsideImage.DOKill(true);
+            buttonInsideImage.color = Color.blue;
         }
 
         #endregion
