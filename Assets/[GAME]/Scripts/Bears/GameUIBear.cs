@@ -159,7 +159,7 @@ namespace OrangeBear.Bears
 
             int questionNumber = (int)arguments[1];
 
-            questionMoneyText.text = "₺" + questionRewardDatas.questionRewardDataList[questionNumber].amount;
+            questionMoneyText.text = "₺" + questionRewardDatas.questionRewardDataList[questionNumber].amount.ToString("N0");
             questionNumber += 1;
             questionNumberText.text = questionNumber + "/12";
             ActivateAllButtons();

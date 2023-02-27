@@ -33,12 +33,12 @@ namespace OrangeBear.Bears
         public void InitQuestionReward(QuestionRewardData questionRewardData, int indexValue)
         {
             moneyAmount = questionRewardData.amount;
-            moneyText.text = "₺" + questionRewardData.amount;
+            moneyText.text = "₺" + questionRewardData.amount.ToString("N0");
             index.text = (indexValue + 1) + ".";
 
             if (questionRewardData.isCheckPoint)
             {
-                holderImage.color = Color.yellow;
+                holderImage.color = new Color(1, 90 /255f, 0, 1);
             }
         }
 
@@ -55,7 +55,29 @@ namespace OrangeBear.Bears
 
         public void AnimateNext(Action callback = null)
         {
-            holderImage.DOColor(Color.blue, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
+            holderImage.DOColor(Color.cyan, 0.5f).OnComplete(() => { callback?.Invoke(); }).SetLink(gameObject);
+        }
+
+        #endregion
+
+        #region Event Methods
+
+        protected override void CheckRoarings(bool status)
+        {
+            if (status)
+            {
+                Register(GameEvents.OnGameStart, OnGameStart);
+            }
+
+            else
+            {
+                Unregister(GameEvents.OnGameStart, OnGameStart);
+            }
+        }
+
+        private void OnGameStart(object[] arguments)
+        {
+            holderImage.color = new Color(18 / 255f, 88 / 255f, 182 / 255f, 1);
         }
 
         #endregion

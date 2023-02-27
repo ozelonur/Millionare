@@ -20,11 +20,11 @@ MonoBehaviour:
   - amount: 2000
     isCheckPoint: 0
   - amount: 3000
-    isCheckPoint: 1
+    isCheckPoint: 0
   - amount: 5000
     isCheckPoint: 0
   - amount: 7500
-    isCheckPoint: 1
+    isCheckPoint: 0
   - amount: 15000
     isCheckPoint: 0
   - amount: 30000

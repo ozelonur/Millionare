@@ -1,5 +1,6 @@
 ﻿using _GAME_.Scripts.Abstracts;
 using _GAME_.Scripts.Enums;
+using _GAME_.Scripts.Managers;
 using OrangeBear.EventSystem;
 using TMPro;
 using UnityEngine;
@@ -68,6 +69,7 @@ namespace _GAME_.Scripts.CustomInputs
             }
             
             usedImage.gameObject.SetActive(true);
+            StatisticManager.Instance.IncreaseJokerCount();
         }
 
         #endregion
