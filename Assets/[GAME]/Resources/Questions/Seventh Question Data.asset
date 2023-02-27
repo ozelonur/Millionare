@@ -25,3 +25,13 @@ MonoBehaviour:
       isCorrect: 0
     - answer: IV. Mehmed
       isCorrect: 1
+  - question: "Hangisi \"kesinlikle\" anlam\u0131na gelmez?"
+    answers:
+    - answer: Katiyen
+      isCorrect: 0
+    - answer: Kesinkes
+      isCorrect: 0
+    - answer: "Pek\xE2l\xE2"
+      isCorrect: 0
+    - answer: Daima
+      isCorrect: 1

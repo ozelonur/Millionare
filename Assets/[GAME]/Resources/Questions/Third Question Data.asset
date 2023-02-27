@@ -25,3 +25,14 @@ MonoBehaviour:
       isCorrect: 0
     - answer: "B\xFCy\xFCk Budape\u015Fte Oteli"
       isCorrect: 1
+  - question: "\"Ge\xE7ti Bor'un pazar\u0131\" atas\xF6z\xFCnde ad\u0131 ge\xE7en
+      Bor, hangi ilin bir il\xE7esidir?"
+    answers:
+    - answer: "Ni\u011Fde"
+      isCorrect: 1
+    - answer: "Nev\u015Fehir"
+      isCorrect: 0
+    - answer: "K\u0131r\u015Fehir"
+      isCorrect: 0
+    - answer: Aksaray
+      isCorrect: 0

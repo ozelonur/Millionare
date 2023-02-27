@@ -26,3 +26,16 @@ MonoBehaviour:
       isCorrect: 0
     - answer: "Akdeniz B\xF6lgesi"
       isCorrect: 0
+  - question: "2000'de New Castle \xDCniversitesinin 556.387 ki\u015Fi ve 927 soya\u011Fac\u0131
+      \xFCzerinde yapt\u0131\u011F\u0131 ara\u015Ft\u0131rmada hangisinin erkek \xE7ocuklar\u0131
+      olma ihtimalinin k\u0131z \xE7ocuklar\u0131 olma ihtimalinden daha fazla oldu\u011Fu
+      sonucuna ula\u015F\u0131lm\u0131\u015Ft\u0131r?"
+    answers:
+    - answer: "K\u0131z karde\u015Fi daha \xE7ok olan kad\u0131nlar\u0131n"
+      isCorrect: 0
+    - answer: "K\u0131z karde\u015Fi daha \xE7ok olan erkeklerin"
+      isCorrect: 0
+    - answer: "Erkek karde\u015Fi daha \xE7ok olan kad\u0131nlar\u0131n"
+      isCorrect: 0
+    - answer: "Erkek karde\u015Fi daha \xE7ok olan erkeklerin"
+      isCorrect: 1

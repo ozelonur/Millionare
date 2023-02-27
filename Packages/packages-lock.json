@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f8f8dc7766254b3641a469035045ec34952c42e4"
+      "hash": "e714b92ffce09adb568ef9abf18b76093848fabc"
     },
     "com.orangebear.entitysystem": {
       "version": "https://github.com/ozelonur/com.orangebear.entitysystem.git",

@@ -24,3 +24,14 @@ MonoBehaviour:
       isCorrect: 1
     - answer: Ah Nerede
       isCorrect: 0
+  - question: "\"A\u011Fustos'un yar\u0131s\u0131 yaz\" \u015Feklinde ba\u015Flayan
+      atas\xF6z\xFCn\xFCn devam\u0131 nas\u0131ld\u0131r?"
+    answers:
+    - answer: "Yar\u0131s\u0131 g\xFCzd\xFCr"
+      isCorrect: 0
+    - answer: "Yar\u0131s\u0131 bahard\u0131r"
+      isCorrect: 0
+    - answer: "Yar\u0131s\u0131 k\u0131\u015Ft\u0131r"
+      isCorrect: 1
+    - answer: "Yar\u0131s\u0131 yazd\u0131r"
+      isCorrect: 0

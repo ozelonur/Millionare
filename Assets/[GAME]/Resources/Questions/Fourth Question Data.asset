@@ -24,3 +24,14 @@ MonoBehaviour:
       isCorrect: 0
     - answer: Asya ve Afrika
       isCorrect: 0
+  - question: "Basketbolda \xE7embere yan durarak tek elle ba\u015F \xFCzerinden
+      ge\xE7irilerek at\u0131lan \u015Futa ne ad verilir? "
+    answers:
+    - answer: "Cem\u015Fat"
+      isCorrect: 0
+    - answer: Plonjon
+      isCorrect: 0
+    - answer: "Huk\u015Fat"
+      isCorrect: 1
+    - answer: Degaj
+      isCorrect: 0

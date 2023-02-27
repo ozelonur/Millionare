@@ -24,3 +24,15 @@ MonoBehaviour:
       isCorrect: 1
     - answer: "Bir m\xFCzik aleti"
       isCorrect: 0
+  - question: "Ed Sheeran, \xE7ocukken ya\u015Fad\u0131\u011F\u0131 kekemelik sorununu
+      yenmesinde kimin bir alb\xFCm\xFCndeki \u015Fark\u0131lar\u0131 dinleyip t\xFCm
+      s\xF6zlerini \xF6\u011Frenmesinin b\xFCy\xFCk faydas\u0131 oldu\u011Funu s\xF6ylemi\u015Ftir?"
+    answers:
+    - answer: Snoop Dog
+      isCorrect: 0
+    - answer: 50 Cent
+      isCorrect: 0
+    - answer: Eminem
+      isCorrect: 1
+    - answer: Ceza
+      isCorrect: 0

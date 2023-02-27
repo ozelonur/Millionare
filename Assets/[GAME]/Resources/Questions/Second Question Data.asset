@@ -28,3 +28,14 @@ MonoBehaviour:
       isCorrect: 0
     - answer: Halikarnas Mozelesi
       isCorrect: 0
+  - question: "Hangisi 1991'de \u0130ngiltere milli futbol tak\u0131m\u0131nda be\u015F
+      defa forma giymi\u015F bir futbolcunun soy ad\u0131d\u0131r?"
+    answers:
+    - answer: Salako
+      isCorrect: 1
+    - answer: Davaro
+      isCorrect: 0
+    - answer: Feyzo
+      isCorrect: 0
+    - answer: Maho
+      isCorrect: 0

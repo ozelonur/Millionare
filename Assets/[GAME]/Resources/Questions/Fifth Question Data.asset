@@ -26,3 +26,13 @@ MonoBehaviour:
       isCorrect: 1
     - answer: "B\xF6reklenmi\u015F"
       isCorrect: 0
+  - question: "333'\xFCn 3 kat\u0131, 333'\xFCn 3'te birinden ka\xE7 fazlad\u0131r?"
+    answers:
+    - answer: 0
+      isCorrect: 0
+    - answer: 222
+      isCorrect: 0
+    - answer: 555
+      isCorrect: 0
+    - answer: 888
+      isCorrect: 1

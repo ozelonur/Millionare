@@ -25,3 +25,14 @@ MonoBehaviour:
       isCorrect: 0
     - answer: 1 saat 40 dakika
       isCorrect: 0
+  - question: "\"B\xFCy\xFCk Britanya'daki ba\u015Fkentleri gezdim\" diyen biri hangi
+      \u015Fehre gitti\u011Fini s\xF6ylemi\u015F olmaz?"
+    answers:
+    - answer: Londra
+      isCorrect: 0
+    - answer: Dublin
+      isCorrect: 1
+    - answer: Cardiff
+      isCorrect: 0
+    - answer: Edinburg
+      isCorrect: 0

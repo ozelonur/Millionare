@@ -25,3 +25,13 @@ MonoBehaviour:
       isCorrect: 1
     - answer: Vulcan
       isCorrect: 0
+  - question: "Hangisi bir deyimde de ad\u0131 ge\xE7en bir t\xFCr g\xFCvercindir?"
+    answers:
+    - answer: "Baklac\u0131 kekli\u011Fi"
+      isCorrect: 0
+    - answer: "Yulaf\xE7\u0131 turnas\u0131"
+      isCorrect: 0
+    - answer: "Arpac\u0131 kumrusu"
+      isCorrect: 1
+    - answer: "Dar\u0131c\u0131 b\xFClb\xFCl\xFC"
+      isCorrect: 0

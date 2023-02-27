@@ -26,3 +26,15 @@ MonoBehaviour:
       isCorrect: 0
     - answer: Moloz
       isCorrect: 1
+  - question: "Guinness D\xFCnya Rekorlar\u0131na g\xF6re Sri Lanka'da bulunan ve
+      insan eliyle dikilmi\u015F bilinen en eski a\u011Fa\xE7 olan \"Sri Maha Bodhiya\"
+      adl\u0131 a\u011Fa\xE7 hangi tarihte dikilmi\u015Ftir?"
+    answers:
+    - answer: "M\xD6 1288"
+      isCorrect: 0
+    - answer: "M\xD6 288"
+      isCorrect: 0
+    - answer: MS 288
+      isCorrect: 1
+    - answer: MS 1288
+      isCorrect: 0

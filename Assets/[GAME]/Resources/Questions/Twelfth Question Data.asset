@@ -25,3 +25,14 @@ MonoBehaviour:
       isCorrect: 0
     - answer: Japonya
       isCorrect: 0
+  - question: "Hangi \xFCnl\xFC \xE7izgi karakter genellikle sar\u0131 renkli bir
+      \u015Fapka takar?"
+    answers:
+    - answer: Kirpi Sonic
+      isCorrect: 0
+    - answer: "H\u0131zl\u0131 Gonzales"
+      isCorrect: 1
+    - answer: Road Runner
+      isCorrect: 0
+    - answer: "Tazmanya Canavar\u0131"
+      isCorrect: 0
