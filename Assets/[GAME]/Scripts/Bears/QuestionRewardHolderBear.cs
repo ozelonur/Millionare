@@ -33,7 +33,7 @@ namespace OrangeBear.Bears
         public void InitQuestionReward(QuestionRewardData questionRewardData, int indexValue)
         {
             moneyAmount = questionRewardData.amount;
-            moneyText.text = "₺" + questionRewardData.amount.ToString("N0");
+            moneyText.text = "₺" + questionRewardData.amount.MoneyWithComma();
             index.text = (indexValue + 1) + ".";
 
             if (questionRewardData.isCheckPoint)
@@ -45,7 +45,10 @@ namespace OrangeBear.Bears
 
         public void AnimateEarning(Action callback = null)
         {
-            moneyAmount = moneyText.text.GetNumberInString();
+            string moneyTextString = moneyText.text;
+            string cleanString = moneyTextString.Replace(",", "");
+            
+            moneyAmount = cleanString.GetNumberInString();
             holderImage.DOColor(Color.green, 0.5f).OnComplete(() =>
             {
                 MoneyManager.Instance.AddMoney(moneyAmount);

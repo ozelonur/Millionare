@@ -18,5 +18,10 @@ namespace _GAME_.Scripts.Extensions
                 return -1;
             }
         }
+
+        public static string MoneyWithComma(this int value)
+        {
+            return value.ToString("N");
+        }
     }
 }

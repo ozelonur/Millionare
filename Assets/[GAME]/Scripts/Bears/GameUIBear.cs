@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using _GAME_.Scripts.CustomInputs;
 using _GAME_.Scripts.Enums;
+using _GAME_.Scripts.Extensions;
 using _GAME_.Scripts.GlobalVariables;
 using _GAME_.Scripts.Managers;
 using _GAME_.Scripts.Models;
@@ -159,7 +160,8 @@ namespace OrangeBear.Bears
 
             int questionNumber = (int)arguments[1];
 
-            questionMoneyText.text = "₺" + questionRewardDatas.questionRewardDataList[questionNumber].amount.ToString("N0");
+            questionMoneyText.text =
+                "₺" + questionRewardDatas.questionRewardDataList[questionNumber].amount.MoneyWithComma();
             questionNumber += 1;
             questionNumberText.text = questionNumber + "/12";
             ActivateAllButtons();

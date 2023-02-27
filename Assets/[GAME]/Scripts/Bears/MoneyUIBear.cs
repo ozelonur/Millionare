@@ -1,4 +1,5 @@
-﻿using _GAME_.Scripts.GlobalVariables;
+﻿using _GAME_.Scripts.Extensions;
+using _GAME_.Scripts.GlobalVariables;
 using _GAME_.Scripts.Managers;
 using DG.Tweening;
 using OrangeBear.EventSystem;
@@ -33,7 +34,7 @@ namespace OrangeBear.Bears
         {
             StartCoroutine(CustomCoroutine.WaitOneFrame(() =>
             {
-                moneyText.text = "₺" + MoneyManager.Instance.moneyData.Money.ToString("N0");
+                moneyText.text = "₺" + MoneyManager.Instance.moneyData.Money.MoneyWithComma();
                 moneyHolder.SetActive(true);
                 moneyAmount = MoneyManager.Instance.moneyData.Money;
             }));
@@ -78,12 +79,15 @@ namespace OrangeBear.Bears
 
             DOTween.To(() => moneyAmount, x => moneyAmount = x, money, 2f).OnUpdate(() =>
                 {
-                    moneyText.text = "₺" + moneyAmount.ToString("N0");
+                    moneyText.text = "₺" + moneyAmount.MoneyWithComma();
                 })
-                .OnComplete(() => { moneyAmount = money; })
+                .OnComplete(() =>
+                {
+                    moneyAmount = money;
+                })
                 .SetDelay(.3f).SetLink(gameObject);
 
-            levelBasedMoneyText.text = "₺" + difference.ToString("N0") + "\nKAZANDINIZ!!!";
+            levelBasedMoneyText.text = "₺" + difference.MoneyWithComma() + "\nKAZANDINIZ!!!";
         }
 
         #endregion
