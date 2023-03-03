@@ -64,6 +64,15 @@ namespace OrangeBear.Bears
         private void InitLevel(object[] arguments)
         {
             _index = 0;
+            
+            _questionRewardDataScriptableObject =
+                Resources.Load<QuestionRewardDataScriptableObject>(GlobalStrings.QuestionRewardData);
+            
+            QuestionRewardData[] questionRewardDataList = _questionRewardDataScriptableObject.questionRewardDataList;
+            
+            for (int i = 0; i < questionRewardDataList.Length; i++)
+            {
+            }
         }
 
         private void CorrectAnswer(object[] arguments)

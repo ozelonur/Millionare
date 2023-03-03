@@ -1,12 +1,12 @@
 using System;
 using _GAME_.Scripts.Extensions;
 using _GAME_.Scripts.Managers;
+using _GAME_.Scripts.Models;
 using DG.Tweening;
 using OrangeBear.EventSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using _GAME_.Scripts.Models;
 
 namespace OrangeBear.Bears
 {
@@ -38,7 +38,7 @@ namespace OrangeBear.Bears
 
             if (questionRewardData.isCheckPoint)
             {
-                holderImage.color = new Color(1, 90 /255f, 0, 1);
+                holderImage.color = new Color(1, 90 / 255f, 0, 1);
             }
         }
 
@@ -47,7 +47,7 @@ namespace OrangeBear.Bears
         {
             string moneyTextString = moneyText.text;
             string cleanString = moneyTextString.Replace(",", "");
-            
+
             moneyAmount = cleanString.GetNumberInString();
             holderImage.DOColor(Color.green, 0.5f).OnComplete(() =>
             {
@@ -70,12 +70,19 @@ namespace OrangeBear.Bears
             if (status)
             {
                 Register(GameEvents.OnGameStart, OnGameStart);
+                Register(GameEvents.OnGameComplete, OnGameComplete);
             }
 
             else
             {
                 Unregister(GameEvents.OnGameStart, OnGameStart);
+                Unregister(GameEvents.OnGameComplete, OnGameComplete);
             }
+        }
+
+        private void OnGameComplete(object[] arguments)
+        {
+            holderImage.color = new Color(18 / 255f, 88 / 255f, 182 / 255f, 1);
         }
 
         private void OnGameStart(object[] arguments)

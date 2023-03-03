@@ -136,6 +136,7 @@ namespace OrangeBear.Bears
 
         private void OnGameStart(object[] arguments)
         {
+            SoundManager.Instance.PlayQuestionSound();
             ActivatePanel(InGamePanels.Question);
         }
 
@@ -146,6 +147,10 @@ namespace OrangeBear.Bears
                 StopCoroutine(_rewardPanelTimer);
             }
 
+            if (GameManager.Instance.IsGameStarted && !GameManager.Instance.IsGameCompleted)
+            {
+                SoundManager.Instance.PlayQuestionSound();
+            }
             tapForNextButton.transform.localScale = Vector3.one;
 
             QuestionData questionData = (QuestionData)arguments[0];

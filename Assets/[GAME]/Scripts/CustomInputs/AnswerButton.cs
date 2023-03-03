@@ -1,6 +1,7 @@
 ﻿using System;
 using _GAME_.Scripts.Abstracts;
 using _GAME_.Scripts.GlobalVariables;
+using _GAME_.Scripts.Managers;
 using _GAME_.Scripts.Models;
 using DG.Tweening;
 using TMPro;
@@ -17,9 +18,6 @@ namespace _GAME_.Scripts.CustomInputs
         private TMP_Text answerText;
 
         [SerializeField] private Image buttonInsideImage;
-
-        [SerializeField] private Color correctAnswerColor;
-        [SerializeField] private Color wrongAnswerColor;
         [SerializeField] private Color neutralColor;
 
         #endregion
@@ -61,10 +59,12 @@ namespace _GAME_.Scripts.CustomInputs
             base.OnClick();
             if (_answerData.isCorrect)
             {
+                SoundManager.Instance.PlayCorrectAnswerSound();
                 AnimateCorrect(() => { Roar(CustomEvents.CorrectAnswer, true); });
             }
             else
             {
+                SoundManager.Instance.PlayWrongAnswerSound();
                 AnimateWrong(() => { Roar(CustomEvents.CorrectAnswer, false); });
             }
         }
