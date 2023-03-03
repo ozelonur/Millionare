@@ -1,4 +1,5 @@
 using _GAME_.Scripts.GlobalVariables;
+using _GAME_.Scripts.Models;
 using _GAME_.Scripts.ScriptableObjects;
 using OrangeBear.EventSystem;
 using UnityEngine;
@@ -69,9 +70,10 @@ namespace OrangeBear.Bears
                 Resources.Load<QuestionRewardDataScriptableObject>(GlobalStrings.QuestionRewardData);
             
             QuestionRewardData[] questionRewardDataList = _questionRewardDataScriptableObject.questionRewardDataList;
-            
-            for (int i = 0; i < questionRewardDataList.Length; i++)
+
+            for (int i = 0; i < _holders.Length; i++)
             {
+                _holders[i].InitQuestionReward(questionRewardDataList[i], i);
             }
         }
 

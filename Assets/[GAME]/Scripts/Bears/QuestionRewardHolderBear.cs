@@ -40,6 +40,11 @@ namespace OrangeBear.Bears
             {
                 holderImage.color = new Color(1, 90 / 255f, 0, 1);
             }
+
+            else
+            {
+                holderImage.color = new Color(18 / 255f, 88 / 255f, 182 / 255f, 1);
+            }
         }
 
 
